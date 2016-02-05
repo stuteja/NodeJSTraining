@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<!--<script src= "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.22/require.js" data-main="app2.js"></script>-->
+<script src = "/socket.io/socket.io.js"></script>
+
+<script>
+    var socket;
+    
+    function submitData(){
+        
+        var data =document.getElementById('inputdata').value;
+        socket.emit('submit', data);
+        
+    }
+    function onLoad(){
+        
+        socket = io.connect();
+        
+        socket.on('timer', function(data){
+            document.getElementById('timer').innerHTML=data;
+        })
+        
+    }
+    
+</script>
+</head>
+<body>
+
+<h1>This is a Socket Heading</h1>
+<p>This is a paragraph.</p>
+
+<form action = "#">
+    <p>
+        Data: <input type="text">
+
+
+</body>
+</html>

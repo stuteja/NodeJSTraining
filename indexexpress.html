@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    
+    $(document).ready(function(){
+    
+        var user,pwd;
+        $('#submit').click(function(){
+            user = $('#username').val();
+            pwd = $('#password').val();
+            
+            $.post('/login' ,{username: user,password: pwd}, function(data){
+                
+                if(data=='success'){
+                    console.log('logon success');
+                }
+                
+            })
+            
+        })
+        
+    });
+    
+    
+</script>
+
+
+</head>
+<body>
+
+<h1>This is a express Heading</h1>
+<p>This is a paragraph.</p>
+
+<input type="text" id="username" placeholder="username"/><br/>
+<input type="text" id="password" placeholder="password"/><br/>
+<input type ="button" id="submit" value="submit"/>
+
+
+</body>
+</html>

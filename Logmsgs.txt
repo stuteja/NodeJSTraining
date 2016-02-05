@@ -1,0 +1,14 @@
+GET / HTTP/1.1
+host: sape-node-stuteja.c9users.io
+accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+upgrade-insecure-requests: 1
+user-agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.97 Safari/537.36
+accept-encoding: gzip, deflate, sdch
+accept-language: en-US,en;q=0.8
+cookie: 
+x-forwarded-proto: https
+x-forwarded-port: 443
+x-region: ae
+x-forwarded-for: 14.140.116.145
+Connection: keep-alive
+
